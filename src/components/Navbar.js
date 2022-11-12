@@ -9,7 +9,7 @@ const Navbar = () => {
     const [nav, setNav] = useState(false);
 
     return (
-        <div className="flex justify-between max-w-[1640px] mx-auto items-center p-4">
+        <div className=" flex justify-between max-w-[1640px] mx-auto items-center p-4">
             {/* life side */}
 
             <div className="flex items-center">
