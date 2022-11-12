@@ -6,6 +6,7 @@ import Section from './components/Section';
 import Linecard from './components/Linecard';
 import Foods from './components/Foods';
 import Cotegory from './components/Cotegory';
+import Contact from './components/Contact';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <Linecard />
             <Foods />
             <Cotegory />
+            <Contact />
         </div>
     );
 }

@@ -102,9 +102,9 @@ const Foods = () => {
                     <div key={index} className=" shadow-lg hover:scale-105 duration-300">
                         <img alt={food.name} src={food.image} className="w-full h-[200px] object-cover rounded-t-lg" />
                         <div className="flex justify-between px-4 py-4">
-                            <p className="font-bold text-[22px]">{food.name}</p>
+                            <p className="font-bold">{food.name}</p>
                             <p>
-                                <span className="bg-orange-500 text-[22px] text-white p-2 rounded-full">
+                                <span className="bg-orange-500 text-[20px] text-white p-2 rounded-full">
                                     {food.price}
                                 </span>
                             </p>
