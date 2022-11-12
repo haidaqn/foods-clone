@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Section from './components/Section';
 import Linecard from './components/Linecard';
 import Foods from './components/Foods';
+import Cotegory from './components/Cotegory';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Section />
             <Linecard />
             <Foods />
+            <Cotegory />
         </div>
     );
 }
