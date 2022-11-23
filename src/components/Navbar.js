@@ -20,8 +20,10 @@ const Navbar = () => {
                     Best <span className="font-bold">Eats</span>
                 </h1>
                 <div className="hidden lg:flex items-center bg-gray-300 rounded-full p-2 text-[14px]">
+                    {/*
+                    ship hoặc tới lấy
                     <p className="bg-black text-white p-2 rounded-full">Delivery</p>
-                    <p className="p-2">Pickup</p>
+                    <p className="p-2">Pickup</p> */}
                 </div>
             </div>
             {/* search input */}
