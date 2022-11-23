@@ -21,7 +21,6 @@ export default function SignIn() {
             })
             .catch((error) => {
                 setErr(error.message);
-                alert(error.code);
             });
     };
 
@@ -34,6 +33,7 @@ export default function SignIn() {
                     </Link>
                     <div className="p-4">
                         <h1 className="font-bold text-3xl text-orange-600 text-center">SIGN UP </h1>
+                        {err ? <p className="p-3 bg-red-400 my-2">{err}</p> : null}
                         <form onSubmit={handleSubmit} className="w-[400px] flex flex-col py-10 px-5 m-auto">
                             <input
                                 onChange={(e) => setEmail(e.target.value)}

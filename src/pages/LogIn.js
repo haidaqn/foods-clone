@@ -22,7 +22,6 @@ export default function LogIn() {
             })
             .catch((error) => {
                 setErr(error.message);
-                alert(error.code);
             });
     };
     return (
@@ -34,6 +33,7 @@ export default function LogIn() {
                     </Link>
                     <div className="p-4">
                         <h1 className="font-bold text-3xl text-orange-600 text-center">SIGN IN</h1>
+                        {err ? <p className="p-3 bg-red-400 my-2">{err}</p> : null}
                         <form className="w-[400px] flex flex-col py-10 px-5 m-auto">
                             <input
                                 onChange={(e) => setEmail(e.target.value)}
@@ -53,12 +53,20 @@ export default function LogIn() {
                             >
                                 SIGN IN
                             </button>
-                            <div className="text-[#b3b3b3] flex justify-between items-center text-sm">
-                                <p className="text-[13px] text-[#b3b3b3]">
-                                    <input type="checkbox" className="mr-[5px]" />
-                                    Remember me
-                                </p>
-                                <a href="/">Need help?</a>
+                            <div>
+                                <div className="text-[#b3b3b3] flex justify-between items-center text-sm">
+                                    <p className="text-[13px] text-[#b3b3b3]">
+                                        <input type="checkbox" className="mr-[5px]" />
+                                        Remember me
+                                    </p>
+                                    <a href="/">Need help?</a>
+                                </div>
+                                <div className="text-[14px] flex mt-3">
+                                    <p className="text-cyan-400">New To Foods Delivered?</p>
+                                    <a href="/signup" className="px-2">
+                                        SIGN UP
+                                    </a>
+                                </div>
                             </div>
                         </form>
                     </div>
