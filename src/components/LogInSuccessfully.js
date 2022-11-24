@@ -1,8 +1,7 @@
 import React from 'react';
-
 import Section from './Section';
 import Navbar from './Navbar';
-import LineCard from './LineCard';
+import Linecard from './Linecard';
 import Foods from './Foods';
 import Category from './Category';
 import Contact from './Contact';
@@ -12,7 +11,7 @@ export default function LogInSuccessfully() {
         <>
             <Navbar />
             <Section />
-            <LineCard />
+            <Linecard />
             <Foods />
             <Category />
             <Contact />
