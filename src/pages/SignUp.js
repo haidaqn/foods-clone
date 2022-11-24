@@ -17,7 +17,7 @@ export default function SignIn() {
         createUserWithEmailAndPassword(auth, email, pw)
             .then(() => {
                 alert('thành công');
-                navigate('/');
+                navigate('/login');
             })
             .catch((error) => {
                 setErr(error.message);

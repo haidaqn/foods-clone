@@ -7,6 +7,7 @@ import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import { UserManagement } from './Context/AuthContext';
 import LogInSuccessfully from './components/LogInSuccessfully';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
     return (
@@ -16,6 +17,14 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<LogIn />} />
                     <Route path="/signup" element={<SignUp />} />
+                    <Route
+                        path="/loginsuccessfully"
+                        element={
+                            <ProtectedRoute>
+                                <LogInSuccessfully />
+                            </ProtectedRoute>
+                        }
+                    />
                 </Routes>
             </ContextProvider>
         </div>

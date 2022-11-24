@@ -18,7 +18,7 @@ export default function LogIn() {
         signInWithEmailAndPassword(auth, email, pw)
             .then(() => {
                 alert('thành công');
-                navigate('/');
+                navigate('/loginsuccessfully');
             })
             .catch((error) => {
                 setErr(error.message);

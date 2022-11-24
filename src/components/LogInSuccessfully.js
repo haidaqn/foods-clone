@@ -12,7 +12,6 @@ export default function LogInSuccessfully() {
         <>
             <Navbar />
             <Section />
-            <Section />
             <LineCard />
             <Foods />
             <Category />

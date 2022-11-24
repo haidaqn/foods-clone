@@ -4,9 +4,24 @@ import { BsFillCartFill, BsFillSaveFill } from 'react-icons/bs';
 import { TbTruckDelivery } from 'react-icons/tb';
 import { FaUserFriends, FaWallet } from 'react-icons/fa';
 import { MdFavorite, MdHelp } from 'react-icons/md';
+import { UserManagement } from '../Context/AuthContext';
+import { auth } from '../firebase';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
+    const { user, logOut } = UserManagement();
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        try {
+            await logOut();
+            navigate('/');
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <div className=" flex justify-between max-w-[1640px] mx-auto items-center p-4">
             {/* life side */}
@@ -19,10 +34,8 @@ const Navbar = () => {
                     Best <span className="font-bold">Eats</span>
                 </h1>
                 <div className="hidden lg:flex items-center bg-gray-300 rounded-full p-2 text-[14px]">
-                    {/*
-                    ship hoặc tới lấy
                     <p className="bg-black text-white p-2 rounded-full">Delivery</p>
-                    <p className="p-2">Pickup</p> */}
+                    <p className="p-2">Pickup</p>
                 </div>
             </div>
             {/* search input */}
@@ -39,10 +52,16 @@ const Navbar = () => {
                 />
             </div>
             {/* Cart */}
-            <div>
+            <div className="flex">
                 <button className="bg-black text-white hidden sm:flex items-center py-2 rounded-full">
                     <BsFillCartFill size={25} />
                     Cart
+                </button>
+                <button
+                    onClick={handleLogout}
+                    className="ml-5 bg-black text-white hidden sm:flex items-center py-2 rounded-full hover:opacity-50"
+                >
+                    LoG Out
                 </button>
             </div>
             {/* Mobile */}
