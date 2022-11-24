@@ -9,15 +9,15 @@ export default function SignIn() {
     const [email, setEmail] = useState('');
     const [pw, setPw] = useState('');
     const [err, setErr] = useState('');
-    const { user, signUp } = UserManagement();
+    const { user, setUser, signUp } = UserManagement();
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, pw)
-            .then((userCredential) => {
+            .then(() => {
                 alert('thành công');
-                const user = userCredential.user;
+                navigate('/');
             })
             .catch((error) => {
                 setErr(error.message);

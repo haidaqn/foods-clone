@@ -16,9 +16,9 @@ export default function LogIn() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, pw)
-            .then((userCredential) => {
-                const user = userCredential.user;
+            .then(() => {
                 alert('thành công');
+                navigate('/');
             })
             .catch((error) => {
                 setErr(error.message);

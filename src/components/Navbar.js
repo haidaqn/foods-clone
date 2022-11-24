@@ -7,7 +7,6 @@ import { MdFavorite, MdHelp } from 'react-icons/md';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
-
     return (
         <div className=" flex justify-between max-w-[1640px] mx-auto items-center p-4">
             {/* life side */}

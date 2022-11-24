@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Linecard = () => {
+const LineCard = () => {
     return (
         <div className=" max-w-[1640px] m-auto px-4 py-10 grid md:grid-cols-3 gap-6">
             <div className="rounded-xl relative">
@@ -49,4 +49,4 @@ const Linecard = () => {
     );
 };
 
-export default Linecard;
+export default LineCard;

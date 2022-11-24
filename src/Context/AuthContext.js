@@ -22,7 +22,7 @@ export const ContextProvider = ({ children }) => {
         };
     });
 
-    return <Context.Provider value={{ signOut, logOut, user }}>{children}</Context.Provider>;
+    return <Context.Provider value={{ signOut, logOut, setUser, user }}>{children}</Context.Provider>;
 };
 
 export const UserManagement = () => {
