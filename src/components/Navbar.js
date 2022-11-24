@@ -30,7 +30,7 @@ const Navbar = () => {
                 <div className="cursor-pointer">
                     <AiOutlineMenu size={30} onClick={() => setNav(!nav)} />
                 </div>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
+                <h1 className="text-xl sm:text-3xl lg:text-4xl px-2">
                     Best <span className="font-bold">Eats</span>
                 </h1>
                 <div className="hidden lg:flex items-center bg-gray-300 rounded-full p-2 text-[14px]">
@@ -44,22 +44,22 @@ const Navbar = () => {
                         bg-gray-200 items-center px-2 
                         w-[200px] sm:w-[400px] lg:w-[500px]"
             >
-                <AiOutlineSearch size={30} />
+                <AiOutlineSearch size={25} />
                 <input
                     type="text"
-                    className="bg-transparent p-2 w-full focus:outline-none"
+                    className="bg-transparent p-2 w-[80%] sm:w-full focus:outline-none"
                     placeholder="Search foods.."
                 />
             </div>
             {/* Cart */}
             <div className="flex">
                 <button className="bg-black text-white hidden sm:flex items-center py-2 rounded-full">
-                    <BsFillCartFill size={25} />
+                    <BsFillCartFill size={20} />
                     Cart
                 </button>
                 <button
                     onClick={handleLogout}
-                    className="ml-5 bg-black text-white hidden sm:flex items-center py-2 rounded-full hover:opacity-50"
+                    className="ml-5 bg-black text-white text-[8px] sm:text-[16px] sm:flex items-center py-2 rounded-full hover:opacity-50"
                 >
                     LoG Out
                 </button>
