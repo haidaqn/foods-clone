@@ -55,9 +55,9 @@ export default function SignIn() {
                             </button>
                             <div className="text-[14px] flex">
                                 <p className="text-cyan-400">Do you already have an account?</p>
-                                <a href="/login" className="px-2">
+                                <Link to="/login" className="px-2">
                                     SIGN IN
-                                </a>
+                                </Link>
                             </div>
                         </form>
                     </div>

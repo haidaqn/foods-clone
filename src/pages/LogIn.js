@@ -63,9 +63,9 @@ export default function LogIn() {
                                 </div>
                                 <div className="text-[14px] flex mt-3">
                                     <p className="text-cyan-400">New To Foods Delivered?</p>
-                                    <a href="/signup" className="px-2">
+                                    <Link to="/signup" className="px-2">
                                         SIGN UP
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </form>
